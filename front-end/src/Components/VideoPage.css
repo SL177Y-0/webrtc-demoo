@@ -1,0 +1,193 @@
+/* Base Styles */
+.video-call-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.videos {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#remote-feed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#local-feed {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    width: 20%;
+    max-width: 200px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Video Message Box */
+.video-message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Action Buttons */
+#menu-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-3d {
+    position: relative;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+.button-3d:hover {
+    transform: translateY(-5px) rotateX(15deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.button-3d:active {
+    transform: translateY(0) rotateX(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-3d.mic {
+    background: linear-gradient(145deg, #6e8efb, #4a6cf7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-3d.hangup {
+    background: linear-gradient(145deg, #ff4d4d, #ff1a1a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-3d.camera {
+    background: linear-gradient(145deg, #6e8efb, #4a6cf7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-3d i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.button-3d .btn-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Wrapper */
+.button-wrapper,
+.button {
+    width: 100px;
+    height: 80px;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.button-wrapper i {
+    font-size: 32px;
+    color: #ccc;
+    position: absolute;
+    left: 35px;
+    top: 20px;
+}
+
+.button-wrapper i.fa-caret-up {
+    left: 75px;
+    top: 0;
+    z-index: 100000;
+    padding: 5px;
+}
+
+.button-wrapper i.fa-caret-up:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.btn-text {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.hangup-wrapper {
+    flex: auto;
+}
+
+.hang-up {
+    position: relative;
+    right: 10px;
+    top: 20px;
+}

@@ -1,0 +1,105 @@
+/* Home Container */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Join Screen */
+.join-screen {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.join-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.join-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(145deg, #6e8efb, #4a6cf7);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.join-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Home Content */
+.home-content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.username {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.call-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.call-section,
+.answer-section {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.call-section h2,
+.answer-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.call-button,
+.answer-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background: linear-gradient(145deg, #6e8efb, #4a6cf7);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.call-button:hover,
+.answer-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.call-card {
+    margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
